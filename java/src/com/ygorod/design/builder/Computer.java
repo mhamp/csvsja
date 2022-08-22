@@ -61,6 +61,16 @@ public class Computer {
 		}
 		
 		public Computer build(){
+			if(this.HDD == null){
+				throw new NullPointerException("The property \"HDD\" is null. "
+			      	+ "Please set the value by \"HDD()\". "
+			      	+ "The properties \"HDD\", \"RAM\" are required.");
+			}
+			if(this.RAM == null){
+				 throw new NullPointerException("The property \"RAM\" is null. "
+			      	+ "Please set the value by \"RAM()\". "
+			      	+ "The properties \"HDD\", \"RAM\" are required.");
+			}
 			return new Computer(this);
 		}
 	}
